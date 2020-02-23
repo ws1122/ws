@@ -58,7 +58,7 @@
     "shell.js": "^3.1.0",
     "tough-cookie": "^2.3.2",
     "tunnel-agent": "^0.6.0",
-    "vant": "^1.6.24",
+    "vant": "^2.1.8",
     "vconsole": "^2.5.2",
     "vue-carousel-3d": "^0.1.18",
     "vue-count-to": "^1.0.13",
