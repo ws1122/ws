@@ -1,0 +1,66 @@
+@function Px($px) {
+  @return $px / 750 * 10rem;
+}
+
+@mixin Height($height) {
+  height: $height;
+  line-height: $height;
+}
+
+@mixin Gradient($color) {
+  background: linear-gradient(top, $color, darken($color, 5%));
+}
+
+@mixin Masks() {
+  .mask {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.5);
+  }
+  .pop {
+    z-index: 101;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: Px(610);
+    background: #fff;
+    border-radius: Px(30);
+  }
+  .pop .pop-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: Px(272);
+    .pop-topcon {
+      text-align: center;
+      font-size: Px(36);
+      color: #666666;
+      p {
+        color: #151515;
+      }
+    }
+  }
+  .pop .pop-bot {
+    display: flex;
+    border-top: 1px solid #E9E9E9;
+    div {
+      box-sizing: border-box;
+      text-align: center;
+      height: Px(88);
+      line-height: Px(88);
+      width: 50%;
+      font-size: Px(36);
+      color: #333333;
+      &.confirm {
+        color: #5785FF;
+        border-left: 1px solid #E9E9E9;
+      }
+    }
+  }
+}

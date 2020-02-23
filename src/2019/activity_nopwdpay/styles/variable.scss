@@ -1,0 +1,12 @@
+@function Px($px) {
+  @return $px / 750 * 10rem;
+}
+
+@mixin Height($height) {
+  height: $height;
+  line-height: $height;
+}
+
+@mixin Gradient($color) {
+  background: linear-gradient(top, $color, darken($color, 5%));
+}

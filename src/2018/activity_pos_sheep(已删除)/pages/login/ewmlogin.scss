@@ -1,0 +1,11 @@
+/* 二维码登录的样式 */
+@import '../../styles/variable.scss';
+iframe {
+    width: 100%;
+    margin-top: Px(100)
+}
+.impowerBox .qrcode {width: Px(200);}
+.impowerBox .title {display: none;}
+.impowerBox .info {width: Px(200);}
+.status_icon {display: none}
+.impowerBox .status {text-align: center;}

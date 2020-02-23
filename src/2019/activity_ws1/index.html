@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+  <meta content="application/xhtml+xml;charset=UTF-8" http-equiv="Content-Type">
+  <meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+  <meta content="no-cache" http-equiv="pragma">
+  <meta content="0" http-equiv="expires">
+  <meta content="telephone=no, address=no" name="format-detection">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title> </title>
+  <!-- <script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script> -->
+  <!-- <script src="//cdn.jsdelivr.net/npm/eruda"></script> -->
+  <script>
+    // eruda.init();
+  </script>
+</head>
+<body>
+  <div id="app"></div>
+</body>
+<script>
+    function isShowEruda() {
+    var isShow = false
+    var hrefParams = location.hash.split('?')[1]
+    var hrefParamsList = []
+    hrefParamsList = hrefParams.split('&')
+    if (hrefParamsList.length > 0) {
+      for (var i = 0; i < hrefParamsList.length; i++) {
+        if (hrefParamsList[i].split('=')[0] === 'act') {
+          isShow = true
+          break
+        }
+      }
+    } else {
+      isShow = false
+    }
+    return isShow
+  }
+  function initEruda() {
+    var script = document.createElement('script');
+    script.src = "//cdn.jsdelivr.net/npm/eruda";
+    document.body.appendChild(script);
+    script.onload = function () {
+      eruda.init()
+    }
+  }
+  var isshow = isShowEruda()
+  if (isshow) {
+    initEruda()
+  }
+
+
+</script>
+</html>
